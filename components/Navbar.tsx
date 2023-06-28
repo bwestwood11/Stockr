@@ -10,6 +10,7 @@ export default function Navbar() {
   return (
     <div>
       <p>Navbar</p>
+      <p>Test</p>
       <button onClick={() => signIn()}>Sign in with Google</button>
       <button onClick={() => signOut()}>Sign out with Google</button>
     </div>
