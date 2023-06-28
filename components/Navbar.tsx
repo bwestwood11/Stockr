@@ -11,7 +11,7 @@ export default function Navbar() {
     <div>
       <p>Navbar</p>
       <p>Stockr</p>
-      <button onClick={() => signIn()}>Sign in with Google</button>
+      <button onClick={() => signIn('google')}>Sign in with Google</button>
       <button onClick={() => signOut()}>Sign out with Google</button>
     </div>
   );
