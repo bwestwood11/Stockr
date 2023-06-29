@@ -1,15 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.logoImage {
+  margin-left: -20px;
+}
 
 @media only screen and (max-width: 1300px) {
-  .main-wrapper {
+  .navbar {
     padding: 0 40px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .main-wrapper {
+  .navbar {
     padding: 0 20px;
   }
 }
