@@ -16,6 +16,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../Dropdown";
+import GoogleButton from "react-google-button";
 
 export default function Navbar() {
   const { data: session } = useSession();
@@ -23,7 +24,7 @@ export default function Navbar() {
   console.log(session);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background">
+    <header className="sticky top-0 z-100 w-full border-b bg-white">
       <nav
         className={cn(
           styles.navbar,
@@ -59,7 +60,7 @@ export default function Navbar() {
                 <DropdownMenuItem>
                   <Link
                     className={buttonVariants()}
-                    href={`/dashboard?id=${session?.user?.id}`}
+                    href={`/dashboard`}
                   >
                     Dashboard
                   </Link>
@@ -84,7 +85,7 @@ export default function Navbar() {
           </div>
         ) : (
           <Button className="pr-0" onClick={() => signIn("google")}>
-            Sign in
+           Sign in
           </Button>
         )}
       </nav>

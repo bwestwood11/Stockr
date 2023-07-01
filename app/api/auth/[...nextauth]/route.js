@@ -35,7 +35,7 @@ const handler = NextAuth({
             const user = await User.create({
                 email: profile.email,
                 name: profile.name,
-                image: profile.picture
+                image: profile.picture,
             });
        }     
      return true
