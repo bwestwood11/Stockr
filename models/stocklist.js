@@ -7,6 +7,7 @@ const StockListSchema = new Schema({
     },
     symbol: {
         type: String,
+        
     },
     name: {
         type: String,

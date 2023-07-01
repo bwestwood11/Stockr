@@ -57,8 +57,16 @@ export default function Navbar() {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="mt-4 mr-1">
                 <DropdownMenuItem>
-                  <Link className={buttonVariants()} href={"/dashboard"}>
+                  <Link
+                    className={buttonVariants()}
+                    href={`/dashboard?id=${session?.user?.id}`}
+                  >
                     Dashboard
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link className={buttonVariants()} href={"/search"}>
+                    Search
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
