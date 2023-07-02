@@ -9,6 +9,7 @@ export default function SearchStock() {
   const [input, setInput] = useState("");
   const [results, setResults] = useState([]);
 
+  // Handle search
   const handleSearch = async (e) => {
     e.preventDefault();
     const res = await fetch(`/api/search?symbol=${input}`);
