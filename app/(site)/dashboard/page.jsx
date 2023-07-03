@@ -55,9 +55,15 @@ export default function DashboardPage() {
   };
 
   return (
-    <section className="text-center">
-      <h1 className="font-bold text-2xl mt-10">Dashboard</h1>
-      <h2>Your Personalized Watch List</h2>
+    <section className="text-center mt-20 w-full">
+      <h1 className="mt-10 text-2xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center">
+      {session?.user?.name ? `Welcome, ${session?.user?.name}` : "Welcome"}
+      <br />
+          <span className="bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent text-center">Your Dashboard</span>
+    </h1>
+    <p className="mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl mx-auto text-center">
+      Checkout out your watchlist below.
+    </p>
       {/* <Suspense fallback={<div className="text-center">Loading...</div>}>
         {stocks?.map((stock) => (
           <div key={stock._id}>
@@ -67,9 +73,7 @@ export default function DashboardPage() {
           </div>
         ))}
       </Suspense> */}
-      <Suspense>
         <DataTable columns={columns} data={stocks} />
-      </Suspense>
     </section>
   );
 }

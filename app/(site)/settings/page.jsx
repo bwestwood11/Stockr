@@ -33,8 +33,16 @@ export default function Example() {
 
   return (
     <>
-
+ <h1 className="mt-10 text-2xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center">
+      {session?.user?.name ? `${session?.user?.name}'s`  : "Welcome"}
+      <br  />
+          <span className="bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent text-center">Settings</span>
+    </h1>
+    <p className="mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl mx-auto text-center">
+      Edit your account settings below.
+    </p>
       <div className="mx-auto max-w-7xl pt-16 lg:flex lg:gap-x-16 lg:px-8">
+        
         <aside className="flex overflow-x-auto border-b border-gray-900/5 py-4 lg:block lg:w-64 lg:flex-none lg:border-0 lg:py-20">
           <nav className="flex-none px-4 sm:px-6 lg:px-0">
             <ul role="list" className="flex gap-x-3 gap-y-1 whitespace-nowrap lg:flex-col">

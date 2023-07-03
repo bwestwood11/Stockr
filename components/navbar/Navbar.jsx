@@ -24,7 +24,7 @@ export default function Navbar() {
   console.log(session);
 
   return (
-    <header className="sticky top-0 z-100 w-full border-b bg-white">
+    <header className="sticky shadow-lg top-0 z-100 w-full border-b bg-white">
       <nav
         className={cn(
           styles.navbar,

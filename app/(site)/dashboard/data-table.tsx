@@ -15,11 +15,15 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/Table";
+import { useState } from "react";
+
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
 }
+
+
 
 export function DataTable<TData, TValue>({
   columns,
@@ -39,7 +43,7 @@ export function DataTable<TData, TValue>({
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
                 return (
-                  <TableHead key={header.id} className="text-center">
+                  <TableHead key={header.id} className="text-center font-bold">
                     {header.isPlaceholder
                       ? null
                       : flexRender(
