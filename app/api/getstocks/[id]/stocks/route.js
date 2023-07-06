@@ -18,6 +18,7 @@ export async function GET(request, { params }) {
 // Delete
 export async function DELETE(request, { params }) {
     await connectToDatabase();
+    console.log("params", params)
 
     const stocks = await StockList.findByIdAndDelete(params.id);
 

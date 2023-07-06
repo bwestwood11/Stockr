@@ -6,6 +6,7 @@ import SearchStock from "@/components/SearchStock";
 import { useSearchParams } from "next/navigation";
 import { DataTable } from "./data-table";
 import { columns } from "./columns";
+import { useRouter } from "next/navigation";
 
 export default function DashboardPage() {
   // const searchParams = useSearchParams();
@@ -13,6 +14,7 @@ export default function DashboardPage() {
   // console.log(id)
   const [stocks, setStocks] = useState([]);
   const { data: session, status } = useSession();
+  const router = useRouter();
   console.log(session);
 
   // useEffect(() => {
@@ -37,22 +39,23 @@ export default function DashboardPage() {
       }
     };
     getStocks();
-  }, [status]);
+  }, [status])
 
-  const handleDelete = async (id) => {
-    const hasConfirmed = confirm(
-      "Are you sure you want to remove this stock from your watch list?"
-    );
+  // const handleDelete = async (id) => {
+  //   const hasConfirmed = confirm(
+  //     "Are you sure you want to remove this stock from your watch list?"
+  //   );
 
-    if (hasConfirmed) {
-      const response = await fetch(`/api/stock/${id}`, {
-        method: "DELETE",
-      });
+  //   if (hasConfirmed) {
+  //     const response = await fetch(`/api/getstocks/${id}/stocks`, {
+  //       method: "DELETE",
+  //     });
 
-      const filteredStocks = stocks.filter((stock) => stock.id !== id);
-      setStocks(filteredStocks);
-    }
-  };
+
+  //     const filteredStocks = stocks.filter((stock) => stock.id !== id);
+  //     setStocks(filteredStocks);
+  //   }
+  // };
 
   return (
     <section className="text-center mt-20 w-full">
@@ -70,6 +73,7 @@ export default function DashboardPage() {
             <p>{stock.symbol.split(":").reverse().pop()}</p>
             <p>{stock.name}</p>
             <p>{stock.price}</p>
+            <button onClick={() => handleDelete(stock._id)} className="bg-red-500 text-white p-2 rounded-full">Remove</button>
           </div>
         ))}
       </Suspense> */}
