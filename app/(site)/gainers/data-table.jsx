@@ -39,6 +39,7 @@ export function DataTable({
   });
   console.log(table.getRowModel().rows[0]?.original?._id);
  console.log("stock information", data)
+
   const [stocks, setStocks] = useState(table.getRowModel().rows);
   const router = useRouter();
 console.log('table', table.getRowModel().rows)

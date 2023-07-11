@@ -42,6 +42,8 @@ export function DataTable({
   const [stocks, setStocks] = useState(table.getRowModel().rows);
   const router = useRouter();
 console.log('table', table.getRowModel().rows)
+
+
   // handle Delete function
   const handleDelete = async (id) => {
     console.log("stock id", id);

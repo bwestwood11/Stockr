@@ -71,6 +71,11 @@ export default function Navbar() {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
+                  <Link className={buttonVariants()} href={"/gainers"}>
+                    Top Gainers
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
                   <Link className={buttonVariants()} href={"/settings"}>
                     Settings
                   </Link>

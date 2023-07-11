@@ -16,10 +16,12 @@ const handler = NextAuth({
     },
     debug: true,
    callbacks: {
-    async session({ session }) {
+    async session({ session, user, token }) {
+        console.log("session callback", session, user, token)
         const sessionUser = await User.findOne({ email: session.user.email });
 
         session.user.id = sessionUser._id;
+        console.log("session user id", session.user.id)
         
         return session;
     },
@@ -46,6 +48,10 @@ const handler = NextAuth({
          }
       
    },
+//    async jwt({ token, user, profile, account, isNewUser }) {
+//     console.log("jwt callback token", token)
+//     console.log("jwt callback profile", profile)
+//    },
 }
 });
 
