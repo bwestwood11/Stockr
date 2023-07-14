@@ -111,8 +111,12 @@ export default function Features() {
                   height={40}
                 />
                 <div className="flex flex-col items-start">
-                     <p className="text-green-500 font-bold tracking-wider">Regina Miles</p>
-                     <p className="text-[#252B42] font-semibold">Investment Banker</p>
+                  <p className="text-green-500 font-bold tracking-wider">
+                    Regina Miles
+                  </p>
+                  <p className="text-[#252B42] font-semibold">
+                    Investment Banker
+                  </p>
                 </div>
               </div>
             </div>
@@ -197,7 +201,6 @@ export default function Features() {
                     />
                   </g>
                 </svg>
-        
               </div>
               <h2 className="text-md font-semibold tracking-wider">
                 Slate helps you see how many more days you need to work to reach
@@ -213,8 +216,10 @@ export default function Features() {
                   height={40}
                 />
                 <div className="flex flex-col items-start">
-                     <p className="text-green-500 font-bold tracking-wider">Brian Miller</p>
-                     <p className="text-[#252B42] font-semibold">Options Trader</p>
+                  <p className="text-green-500 font-bold tracking-wider">
+                    Brian Miller
+                  </p>
+                  <p className="text-[#252B42] font-semibold">Options Trader</p>
                 </div>
               </div>
             </div>
@@ -284,7 +289,7 @@ export default function Features() {
                     />
                   </g>
                 </svg>
-          
+
                 <svg
                   width="23"
                   height="23"
@@ -300,7 +305,6 @@ export default function Features() {
                     />
                   </g>
                 </svg>
-          
               </div>
               <h2 className="text-md font-semibold tracking-wider">
                 Slate helps you see how many more days you need to work to reach
@@ -316,8 +320,10 @@ export default function Features() {
                   height={40}
                 />
                 <div className="flex flex-col items-start">
-                     <p className="text-green-500 font-bold tracking-wider">Patty Johnson</p>
-                     <p className="text-[#252B42] font-semibold">Investor</p>
+                  <p className="text-green-500 font-bold tracking-wider">
+                    Patty Johnson
+                  </p>
+                  <p className="text-[#252B42] font-semibold">Investor</p>
                 </div>
               </div>
             </div>

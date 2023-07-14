@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { Button, buttonVariants } from "@/components/Button";
 import Link from "next/link";
@@ -16,12 +15,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../Dropdown";
-import GoogleButton from "react-google-button";
 
 export default function Navbar() {
   const { data: session } = useSession();
-  const [dropdownVisible, setDropdownVisible] = useState(false);
-  console.log(session);
+  console.log(session?.user?.image);
 
   return (
     <header className="sticky shadow-lg top-0 z-100 w-full border-b bg-white">
@@ -47,7 +44,7 @@ export default function Navbar() {
           <div className="flex">
             <p className="self-center pr-4 hidden sm:block">{`Hi, ${session?.user?.name}`}</p>
             <DropdownMenu>
-              <DropdownMenuTrigger asChild>
+              <DropdownMenuTrigger className="cursor-pointer" asChild>
                 <Avatar>
                   <AvatarImage
                     src={session?.user?.image ? session?.user?.image : ""}
@@ -58,10 +55,7 @@ export default function Navbar() {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="mt-4 mr-1">
                 <DropdownMenuItem>
-                  <Link
-                    className={buttonVariants()}
-                    href={`/dashboard`}
-                  >
+                  <Link className={buttonVariants()} href={`/dashboard`}>
                     Dashboard
                   </Link>
                 </DropdownMenuItem>
@@ -90,7 +84,7 @@ export default function Navbar() {
           </div>
         ) : (
           <Button className="pr-0" onClick={() => signIn("google")}>
-           Sign in
+            Sign in
           </Button>
         )}
       </nav>
