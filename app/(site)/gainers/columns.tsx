@@ -25,5 +25,5 @@ export const columns: ColumnDef<StockInfo>[] = [
   {
     accessorKey: "change_percent",
     header: "% Change",
-  }
+  },
 ];
